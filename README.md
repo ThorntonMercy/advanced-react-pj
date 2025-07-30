@@ -1,54 +1,22 @@
-# React + TypeScript + Vite
+Advanced React E-Commerce App Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+The objective is to create an advanced e-commerce application that utilizes FakeStoreAPI, ContextAPI, Redux Toolkit, and React Query. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visual Features:
+1. I opted to use a mild purple color scheme to set the stage for this shop.
+2. I have the products in stylish card format, with interactive hover.
+3. I have the buttons with a hover effect to darken the shade.
+4. I have the product cards centered utilizing flexbox for a better visual shopping experience. 
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Requirements / Features:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Product listings that display title, price, category, description, rating, the product's image, and a button to add to the cart.
+2. All products are visible in the home page component. 
+3. Added products need to be stored in session storage, and the cart needs to be cleared when the user "checks out".
+4. Category drop down is not hardcoded -- React Query pulls the information in dynamically through API requests.
+5. Products should filter correctly based off of user's filtration choice or by default showing all products.
+6. The shopping cart component needs to display a list of products in the cart and the option of deleting a product from the cart page.
+7. The shopping cart accurately displays the total number of items in the cart as well as the total price of all products combined. These values dynamically update as the user interacts with their cart (eg. removing an item).
+8. The shopping cart will update with a successful checkout message upon clicking checkout, and will display the message for a duration of three seconds prior to returning an "empty cart" message. 

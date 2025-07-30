@@ -1,8 +1,7 @@
-import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
-import ProductList from './components/ProductList'
-import Cart from './components/Cart'
-import './App.css'
+import React from 'react';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import ProductList from './components/ProductList';
+import Cart from './components/Cart';
 
 const App: React.FC = () => {
   return (
@@ -14,9 +13,10 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<ProductList />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
