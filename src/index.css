@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   background: #f7f5fb; 
@@ -49,4 +49,68 @@ select {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+} */
+
+
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  margin: 0; 
+  background: #f7f5fb; 
+  padding: 1rem; 
+  color: #2c2137 
 }
+
+.app { 
+  max-width: 1200px; 
+  margin: 0 auto 
+}
+
+.navbar { 
+  margin-bottom: 1rem; 
+  display: flex; 
+  gap: 1rem; 
+  background: #c3b4e3; 
+  padding: 0.5rem 1rem;
+  border-radius: 8px 
+}
+
+.navbar a { 
+  text-decoration: none; 
+  font-weight: bold; 
+  color: #3d2275; 
+  transition: color .3s 
+}
+
+.navbar a:hover { 
+  color: #8b5cf6 
+}
+
+.navbar button { 
+  background: #c3b4e3; 
+  margin-left: .5rem;
+  color: #3d2275; 
+  border: none; 
+  padding: 0.5rem 1rem; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  transition: background-color .3s, color .3s 
+}
+
+select { 
+  padding: .5rem; 
+  margin-bottom: 1rem; 
+  border-radius: 6px; 
+  border: 1px solid #d2c6e8; 
+  background: #f7f5fb; 
+  color: #2c2137 
+}
+
+.sr-only { 
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  padding: 0; 
+  margin: -1px;
+  overflow: hidden; 
+  clip: rect(0,0,0,0); 
+  border: 0 }
