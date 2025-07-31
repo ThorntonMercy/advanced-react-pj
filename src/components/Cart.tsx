@@ -3,14 +3,28 @@ import { removeFromCart, clearCart } from '../store/slices/cartSlice';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import './Cart.css';
 
+export type CartItem = {
+  id: number;
+  price: number;
+  quantity: number
+};
+
+export function calculateItemCount(cart: CartItem[]): number {
+  return cart.reduce((sum, item) => sum + item.quantity, 0);
+}
+
+export function calculateTotalPrice(cart: CartItem[]): number {
+  return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+}
+
 const Cart: React.FC = () => {
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
 
   const [checkoutSuccess, setCheckoutSuccess] = useState(false);
 
-  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const totalItems = calculateItemCount(cart);
+  const totalPrice = calculateTotalPrice(cart);
 
   const handleCheckout = () => {
     dispatch(clearCart());
