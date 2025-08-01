@@ -1,4 +1,4 @@
-name: CI/CD 
+name: adv-react-cicd 
 
 on:
   push:
