@@ -26,4 +26,3 @@ dist-ssr
 
 deploy.yml
 README.txt # Vercel configuration file
-project.json # Vercel project configuration file
