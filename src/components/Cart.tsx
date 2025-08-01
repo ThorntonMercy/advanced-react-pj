@@ -46,14 +46,14 @@ const Cart: React.FC = () => {
           <div>
             <p>{item.title}</p>
             <p>Qty: {item.quantity}</p>
-            <p>${(item.price * item.quantity).toFixed(2)}</p>
+            <p data-testid="cart-item-price">${(item.price * item.quantity).toFixed(2)}</p>
             <button onClick={() => dispatch(removeFromCart(item.id))}>Remove</button>
           </div>
         </div>
       ))}
       <hr />
       <p>Total Items: {totalItems}</p>
-      <p>Total Price: ${totalPrice.toFixed(2)}</p>
+      <p data-testid="cart-total-price">Total Price: ${totalPrice.toFixed(2)}</p>
       <button onClick={handleCheckout}>Checkout</button>
     </div>
   );

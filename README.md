@@ -1,5 +1,6 @@
 Advanced React E-Commerce App Project
 
+Updated: https://adv-react-cicd.vercel.app/
 
 The objective is to create an advanced e-commerce application that utilizes FakeStoreAPI, ContextAPI, Redux Toolkit, and React Query. 
 

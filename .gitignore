@@ -23,3 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+deploy.yml
+README.txt # Vercel configuration file
+project.json # Vercel project configuration file
